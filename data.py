@@ -8,8 +8,8 @@ class Load (object):
 		data isminde dosya oluşturulur"""
 		self.file, self.keys = file, list()
 		if os.path.exists(file) is False:
-			with open(file ,"w") as version:
-				version.write("version:0.1\n")
+			os.system("{} {}".format("touch", 
+			file))
 		for test in open(file):
 			self.keys.append(test.strip(
 			"\n"
@@ -50,5 +50,4 @@ class Load (object):
 	def info (self):
 		return 
 data = Load()
-data.set({"x":"10", "y":"200", "z":"30"}, overwrite=False)
-print data.keyList()
+data.set({"x":10}, overwrite=True)
