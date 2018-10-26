@@ -11,7 +11,9 @@ class Load (object):
 			with open(file ,"w") as version:
 				version.write("version:0.1\n")
 		for test in open(file):
-			self.keys.append(test.strip("\n").split(":")[0])
+			self.keys.append(test.strip(
+			"\n"
+			).split(":")[0])
 	def get (self, key=""):
 		"anahtar değerini öğrenmek için kullan"
 		if len(key) is 0: 
