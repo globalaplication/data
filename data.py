@@ -12,8 +12,7 @@ class Load (object):
 			file))
 		for test in open(file):
 			self.keys.append(test.strip(
-			"\n"
-			).split(":")[0])
+			"\n").split(":")[0])
 	def get (self, key=""):
 		"anahtar değerini öğrenmek için kullan"
 		if len(key) is 0: 
@@ -50,4 +49,4 @@ class Load (object):
 	def info (self):
 		return 
 data = Load()
-data.set({"x":10}, overwrite=True)
+data.set({"x":10, "y":20}, overwrite=True)
