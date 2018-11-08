@@ -67,3 +67,4 @@ class Load (object):
 		return 
 data = Load("./data.op")
 data.set({"a":"a1", "b":"b1", "e":"e1"}, overwrite=True)
+
